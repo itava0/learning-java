@@ -1,26 +1,19 @@
 package com.itava0;
-
-import java.time.LocalDate;
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-        // Scanner
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("What is your name?");
+        //Methods
+        char[] letters = {'A', 'B', 'A', 'C', 'D', 'D', 'D'};
+        int count = countOccurrences(letters, 'A');
+        System.out.println(count);
+    }
 
-        String userName = scanner.nextLine();
-        System.out.println("Hello " + userName);
-
-        System.out.println("How old are you?");
-        int age = Integer.parseInt(scanner.nextLine());
-        int year = LocalDate.now().minusYears(age).getYear();
-        System.out.println("Your were born in " + year);
-
-        if(age < 18) {
-            System.out.println("and you are not an adult");
-        } else {
-            System.out.println("and you are an adult");
+    public static int countOccurrences(char [] letters, char searchLetter) {
+        int count = 0;
+        for( char letter : letters) {
+            if ( letter == searchLetter) {
+                count++;
+            }
         }
+        return count;
     }
 }
