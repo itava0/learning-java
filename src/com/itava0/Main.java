@@ -1,33 +1,28 @@
 package com.itava0;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        // Classes and Objects
-        Lens lensOne = new Lens("sony", "85mm", true);
+        // Sets and Lists
+        Set<Integer> t = new HashSet<Integer>();
+        //Collection of unordered and unique items
+        t.add(5);
+        t.add(7);
+        t.add(6);
 
-        System.out.println(lensOne.brand);
+       boolean x = t.contains(5);
 
-        Passport usPassport = new Passport("1254", LocalDate.of(2025, 1, 16));
-        System.out.println("US Passport");
-        System.out.println(usPassport.number);
-        System.out.println(usPassport.expireDate);
+        ArrayList<Integer> num = new ArrayList<Integer>();
+        num.add(1);
+        num.add(2);
+        num.get(0);
+        num.set(1, 5);
+
+        System.out.println(num);
     }
 
-
-
-    static class Lens {
-        String brand;
-        String focalLength;
-        boolean isPrime;
-
-        //Constructor
-        Lens(String brand, String focalLength, boolean isPrime) {
-                this.brand = brand;
-                this.focalLength = focalLength;
-                this.isPrime = isPrime;
-        }
-
-    }
 }
