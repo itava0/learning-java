@@ -12,6 +12,9 @@ public class Main {
         Dog bill = new Dog("Bill", 4);
         bill.speak();
 
+        Cat sheila = new Cat("Sheila", 2, 1);
+        sheila.speak();
+
     }
 
 }
